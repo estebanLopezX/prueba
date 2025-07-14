@@ -1,0 +1,106 @@
+/mi-sitio-web/
+│
+├── 📁 public/                  # Archivos públicos del sitio (HTML, favicon, etc.)
+│   ├── index.html             # Página principal
+│   ├── productos.html         # Página de productos
+│   ├── nosotros.html          # Página sobre la empresa
+│   ├── certificaciones.html   # Página de certificaciones
+│   ├── contacto.html          # Página de contacto
+│
+├── 📁 assets/                 # Recursos estáticos
+│   ├── 📁 css/                # Hojas de estilo
+│   │   └── estilos.css
+│   ├── 📁 js/                 # Scripts de JavaScript
+│   │   ├── main.js
+│   │   └── filtros.js
+│   ├── 📁 images/             # Imágenes del sitio
+│   │   ├── logo.png
+│   │   ├── mascota/          # Carpeta exclusiva para la mascota de marca
+│   │   └── productos/        # Imágenes de productos
+│   └── 📁 fonts/              # Fuentes personalizadas si las hay
+│
+├── 📁 admin/                  # Panel administrativo
+│   ├── login.html            # Página de login
+│   ├── dashboard.html        # Panel principal
+│   ├── productos.html        # Gestión de productos
+│   ├── promociones.html      # Gestión de promociones y formularios
+│   ├── usuarios.html         # Usuarios registrados
+│   └── estadisticas.html     # Gráficas de tráfico web
+│
+├── 📁 backend/                # Lógica del servidor (PHP, Node.js, etc.)
+│   ├── db/                   # Archivos de base de datos (scripts SQL o conexión)
+│   │   └── conexion.php
+│   ├── api/                  # Endpoints para AJAX (productos, usuarios, etc.)
+│   │   ├── productos.php
+│   │   ├── promociones.php
+│   │   └── usuarios.php
+│   └── auth/                 # Lógica de autenticación
+│       └── login.php
+│
+├── 📁 docs/                   # Documentación del proyecto
+│   ├── manual-de-usuario.pdf
+│   ├── terminos-condiciones.pdf
+│   └── politica-privacidad.pdf
+│
+├── 📁 config/                 # Configuraciones globales
+│   └── config.php            # Rutas, conexión a BD, claves
+│
+├── 📁 database/               # Respaldo de base de datos
+│   └── respaldo.sql
+│
+├── .gitignore                # Ignora archivos como /node_modules, etc.
+├── README.md                 # Descripción del proyecto
+└── package.json              # Si usas Node.js
+/mi-sitio-web/
+│
+├── 📁 public/                  # Archivos públicos del sitio (HTML, favicon, etc.)
+│   ├── index.html             # Página principal
+│   ├── productos.html         # Página de productos
+│   ├── nosotros.html          # Página sobre la empresa
+│   ├── certificaciones.html   # Página de certificaciones
+│   ├── contacto.html          # Página de contacto
+│
+├── 📁 assets/                 # Recursos estáticos
+│   ├── 📁 css/                # Hojas de estilo
+│   │   └── estilos.css
+│   ├── 📁 js/                 # Scripts de JavaScript
+│   │   ├── main.js
+│   │   └── filtros.js
+│   ├── 📁 images/             # Imágenes del sitio
+│   │   ├── logo.png
+│   │   ├── mascota/          # Carpeta exclusiva para la mascota de marca
+│   │   └── productos/        # Imágenes de productos
+│   └── 📁 fonts/              # Fuentes personalizadas si las hay
+│
+├── 📁 admin/                  # Panel administrativo
+│   ├── login.html            # Página de login
+│   ├── dashboard.html        # Panel principal
+│   ├── productos.html        # Gestión de productos
+│   ├── promociones.html      # Gestión de promociones y formularios
+│   ├── usuarios.html         # Usuarios registrados
+│   └── estadisticas.html     # Gráficas de tráfico web
+│
+├── 📁 backend/                # Lógica del servidor (PHP, Node.js, etc.)
+│   ├── db/                   # Archivos de base de datos (scripts SQL o conexión)
+│   │   └── conexion.php
+│   ├── api/                  # Endpoints para AJAX (productos, usuarios, etc.)
+│   │   ├── productos.php
+│   │   ├── promociones.php
+│   │   └── usuarios.php
+│   └── auth/                 # Lógica de autenticación
+│       └── login.php
+│
+├── 📁 docs/                   # Documentación del proyecto
+│   ├── manual-de-usuario.pdf
+│   ├── terminos-condiciones.pdf
+│   └── politica-privacidad.pdf
+│
+├── 📁 config/                 # Configuraciones globales
+│   └── config.php            # Rutas, conexión a BD, claves
+│
+├── 📁 database/               # Respaldo de base de datos
+│   └── respaldo.sql
+│
+├── .gitignore                # Ignora archivos como /node_modules, etc.
+├── README.md                 # Descripción del proyecto
+└── package.json              # Si usas Node.js

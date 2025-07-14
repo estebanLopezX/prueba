@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - Sitio Web</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="video-background">
+        <source src="../assets/videos/film-background.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <!-- Logo lateral izquierdo -->
+            <div class="logo">
+                <img src="../assets/imagenes/LOGO.png" alt="INDUMETALICAS" />
+            </div>
+            <!-- Menú principal -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#certificaciones">CERTIFICACIONES</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa -->
+            <div class="hamburger" id="hamburger-btn">
+                <i class="fi fi-br-menu-burger"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#productos">PRODUCTOS</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li>
+            <li><a href="#certificaciones">CERTIFICACIONES</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <section class="hero">
+            <h1>INDUMETALICAS COBENZAS SAS</h1>
+            <p>Encuentra los mejores productos con calidad certificada</p>
+
+            <!-- Barra de búsqueda -->
+            <div class="search-box">
+                <input type="text" placeholder="Buscar productos..." />
+                <button type="submit"><i class="fi fi-rr-search"></i></button>
+            </div>
+
+        </section>
+
+        <div style="height: 70vh;"></div>
+        <section class="scroll-section">
+            <div class="textos">
+                <div class="scroll-text">Con más de 20 años de experiencia,</div>
+                <div class="scroll-text">en Indumetalicas Cobenzas S.A.S.</div>
+                <div class="scroll-text">nos especializamos en la fabricación y distribución mayorista</div>
+                <div class="scroll-text">de productos indumetálicos certificados bajo la norma RETIE,</div>
+                <div class="scroll-text">garantizando calidad, seguridad y cumplimiento normativo en cada solución</div>
+            </div>
+
+            <div class="box-tablero">
+                <model-viewer id="modelo3D" src="../assets/dimensionales/objeto_tres_D.glb"
+                    ios-src="../assets/dimensionales/objeto_tres_D.usdz" ar camera-controls auto-rotate
+                    style="width:100%; max-width:600px; height:400px;">
+                </model-viewer>
+
+                <div style="margin-top: 20px; text-align: center;">
+                    <button id="btnAR" style="
+          padding: 12px 24px;
+          font-size: 18px;
+          border: none;
+          background: #ff6600;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;">
+                        Ver en tu espacio (AR)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            document.getElementById('btnAR').addEventListener('click', () => {
+                const modelViewer = document.getElementById('modelo3D');
+                modelViewer.activateAR();
+            });
+        </script>
+
+    </main>
+
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
