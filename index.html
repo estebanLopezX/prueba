@@ -8,6 +8,12 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
 
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -26,7 +32,7 @@
                 <img src="./assets/imagenes/LOGO.png" alt="INDUMETALICAS" />
             </div>
             <!-- Menú principal -->
-            <nav class="menu">
+            <nav class="menu" aria-label="Navegación principal">
                 <ul>
                     <li><a href="#inicio">INICIO</a></li>
                     <li><a href="#productos">PRODUCTOS</a></li>
@@ -37,14 +43,14 @@
             </nav>
 
             <!-- Botón hamburguesa -->
-            <div class="hamburger" id="hamburger-btn">
+            <div class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
                 <i class="fi fi-br-menu-burger"></i>
             </div>
         </div>
     </header>
 
     <!-- Menú lateral -->
-    <div class="side-menu" id="side-menu">
+    <div class="side-menu" id="side-menu" role="navigation" aria-label="Menú móvil">
         <ul>
             <li><a href="#inicio">INICIO</a></li>
             <li><a href="#productos">PRODUCTOS</a></li>
@@ -53,11 +59,13 @@
             <li><a href="#contacto">CONTACTO</a></li>
         </ul>
     </div>
+    <!--  -->
 
     <!-- Contenido principal -->
     <main class="main-content">
         <section class="hero">
-            <h1>INDUMETALICAS COBENZAS SAS</h1>
+            <h1>Indumetálicas Cobenzas SAS – Medidores Eléctricos, Cajas y Tableros Certificados RETIE</h1>
+
             <p>Encuentra los mejores productos con calidad certificada</p>
 
             <!-- Barra de búsqueda -->
@@ -65,49 +73,292 @@
                 <input type="text" placeholder="Buscar productos..." />
                 <button type="submit"><i class="fi fi-rr-search"></i></button>
             </div>
-
         </section>
 
-        <div style="height: 70vh;"></div>
+
+
+
+        <!-- HISTORIA -->
+        <div style="height: 55vh;"></div>
+
         <section class="scroll-section">
-            <div class="textos">
-                <div class="scroll-text">Con más de 20 años de experiencia,</div>
-                <div class="scroll-text">en Indumetalicas Cobenzas S.A.S.</div>
-                <div class="scroll-text">nos especializamos en la fabricación y distribución mayorista</div>
-                <div class="scroll-text">de productos indumetálicos certificados bajo la norma RETIE,</div>
-                <div class="scroll-text">garantizando calidad, seguridad y cumplimiento normativo en cada solución</div>
-            </div>
-
-            <div class="box-tablero">
-                <model-viewer id="modelo3D" src="./assets/dimensionales/objeto_tres_D.glb" ios-src="./assets/dimensionales/objeto_tres_D.usdz" ar camera-controls
-                    auto-rotate style="width:100%; max-width:600px; height:400px;">
+            <div class="fixed-content" id="fixedContent">
+                <div class="background-text">INDUMETÁLICAS COBENZAS SAS</div>
+                <model-viewer src="./assets/dimensionales/objeto_tres_D.glb" ar camera-controls auto-rotate
+                    auto-rotate-speed="1" shadow-intensity="1" shadow-softness="1" exposure="1" tone-mapping="aces"
+                    environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_HDR.hdr"
+                    alt="Astronauta 3D">
                 </model-viewer>
-
-
-                <div style="margin-top: 20px; text-align: center;">
-                    <button id="btnAR" style="
-          padding: 12px 24px;
-          font-size: 18px;
-          border: none;
-          background: #ff6600;
-          color: white;
-          border-radius: 8px;
-          cursor: pointer;">
-                        Ver en tu espacio (AR)
-                    </button>
+                <div class="textos">
+                    <div class="scroll-text">Con más de 20 años de experiencia,</div>
+                    <div class="scroll-text">en Indumetalicas Cobenzas S.A.S.</div>
+                    <div class="scroll-text">nos especializamos en la fabricación y distribución mayorista</div>
+                    <div class="scroll-text">de productos indumetálicos certificados bajo la normaㅤ<span
+                            style="font-weight: bolder; color: rgb(255, 255, 255);">RETIE</span>,</div>
+                    <div class="scroll-text">garantizando calidad, seguridad y cumplimiento normativo en cada solución</div>
                 </div>
+                <button id="btnAR" class="fade-item" aria-label="Ver en realidad aumentada"> Ver en tu espacio
+                    (AR)</button>
             </div>
         </section>
 
-        <script>
-            document.getElementById('btnAR').addEventListener('click', () => {
-                const modelViewer = document.getElementById('modelo3D');
-                modelViewer.activateAR();
-            });
-        </script>
 
+        <div style="height: 45vh;"></div>
+        <!-- SERVICIOS -->
+        <section style="backdrop-filter: blur(6px);">
+            <h2 style="text-align: center; font-size: 2.3rem;">Nuestros Servicios</h2>
+
+            <div class="nuestros-servicios">
+                <article class="box-services" style="border-bottom: 5px solid rgb(163, 0, 0);">
+                    <h3>Fabricación Metálica bajo RETIE</h3>
+                    <div class="box-icons-services" style="margin: 1% 5%;">
+                        <img src="./assets/imagenes/logo-retie.png" alt="Logo del certificado RETIE" loading="lazy"
+                            style="width: 100%; margin-bottom: 24%; margin-left: 10%;">
+                    </div>
+                    <p class="text-services">Cumplimos con todas las normas de seguridad eléctrica requeridas por la
+                        normativa RETIE.</p>
+                </article>
+
+                <article class="box-services" style="border-bottom: 5px solid rgb(0, 76, 163);">
+                    <h3>Suministro e Instalación</h3>
+                    <div class="box-icons-services">
+                        <i class="fi fi-ts-shipping-fast" style="color: white;" aria-hidden="true"></i>
+                    </div>
+                    <p class="text-services">Ofrecemos suministro e instalación de productos con total cumplimiento de
+                        normas.</p>
+                </article>
+
+
+                <article class="box-services" style="border-bottom: 5px solid rgb(0, 76, 163);">
+                    <h3>Soluciones para Gas, Agua y Energía</h3>
+                    <div class="box-icons-services">
+                        <i class="fi fi-tr-bolt" style="color: white;" aria-hidden="true"></i>
+                    </div>
+                    <p class="text-services">Ofrecemos tableros especializados para la gestión de servicios básicos.</p>
+                </article>
+
+                <article class="box-services" style="border-bottom: 5px solid rgb(163, 0, 0);">
+                    <h3>Calidad Metálica Garantizada</h3>
+                    <div class="box-icons-services">
+                        <i class="fi fi-sr-welding" style="color: white;" aria-hidden="true"></i>
+                    </div>
+                    <p class="text-services">Nuestros productos están fabricados con metales de alta resistencia,
+                        garantizando durabilidad y seguridad.</p>
+                </article>
+            </div>
+        </section>
+
+        <div style="height: 45vh;"></div>
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="box-productos-content" aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Nuestros Productos</h2>
+            <p class="intro-productos">"Ofrecemos una amplia gama de soluciones: cajas metálicas, tableros de control,
+                medidores de consumo y más”</p>
+
+            <div class="box-productos">
+
+                <a href="./public/productos.html" aria-label="Ver productos para electricidad">
+                    <div class="targets-films red">
+                        <video src="./assets/videos/film-electricidad.MOV" autoplay muted loop playsinline
+                            aria-label="Video de cajas metálicas para electricidad"></video>
+                        <div class="categoria-productos"">ELECTRICIDAD</div>
+                    </div>
+                </a>
+
+                <a href=" ./public/productos.html" arial-label="Ver productos para agua">
+                            <div class="targets-films blue">
+                                <video src="./assets/videos/film-agua.MOV" autoplay muted loop playsinline
+                                    aria-label="Video de cajas metálicas para agua"></video>
+                                <div class="categoria-productos"">AGUA</div>
+                    </div>
+                </a>
+
+                <a href=" ./public/productos.html" aria-label="Ver productos para gas">
+                                    <div class="targets-films red">
+                                        <video src="./assets/videos/film-gas.MOV" autoplay muted loop playsinline
+                                            aria-label="Video de cajas metálicas para gas"></video>
+                                        <div class="categoria-productos"">GAS</div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <div style=" height: 45vh;"></div>
+                                        <!-- ITEMS RELEVANTES -->
+                                        <section aria-labelledby="titulo-items">
+                                            <h2 id="titulo-items" class="visually-hidden">Cifras destacadas de
+                                                Indumetálicas</h2>
+
+                                            <div class="relevant-items">
+                                                <div class="counter" data-count="30"
+                                                    aria-label="30 años de experiencia">
+                                                    <div class="numbers red"> +0 </div>
+                                                    AÑOS DE EXPERIENCIA
+                                                </div>
+
+                                                <div class="counter" data-count="1000"
+                                                    aria-label="Más de 1000 clientes satisfechos">
+                                                    <div class="numbers blue"> +0 </div>
+                                                    CLIENTES SATISFECHOS
+                                                </div>
+
+                                                <div class="counter" data-count="20" aria-label="20 colaboradores">
+                                                    <div class="numbers blue"> +0 </div>
+                                                    COLABORADORES
+                                                </div>
+
+                                                <div class="counter" data-count="30" aria-label="30 marcas autorizadas">
+                                                    <div class=" numbers red"> +0 </div>
+                                                    MARCAS AUTORIZADAS
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <div style="height: 60vh;"></div>
+
+                                        <section class="locations" aria-labelledby="titulo-ubicaciones">
+                                            <h2>Nuestras Ubicaciones</h2>
+                                            <div class="maps">
+
+                                                <div class="box-mapas red">
+                                                    <h3 class="text-maps">TUNJA</h3>
+                                                    <img src="./assets/imagenes/image-tunja.jpg"
+                                                        alt="Vista aérea de Tunja">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.408240301916!2d-73.36384268573522!3d5.535377935747914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a2f09fa35f1c7%3A0x3ff3d0f3167d56b2!2sPlaza%20de%20Bol%C3%ADvar%2C%20Tunja%2C%20Boyac%C3%A1!5e0!3m2!1ses!2sco!4v1689999999999!5m2!1ses!2sco"
+                                                        allowfullscreen="" loading="lazy"
+                                                        referrerpolicy="no-referrer-when-downgrade">
+                                                    </iframe>
+                                                </div>
+
+                                                <div class="box-mapas blue">
+                                                    <h3 class="text-maps">BOGOTÁ</h3>
+                                                    <img src="./assets/imagenes/image-bogota.jpg"
+                                                        alt="Vista de aérea de Bogotá">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.8888990582617!2d-74.07112698573852!3d4.710988343237172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a5dba225c1%3A0x2e2436d7b42e9340!2sPlaza%20de%20Bol%C3%ADvar%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1689999999999!5m2!1ses!2sco"
+                                                        allowfullscreen="" loading="lazy"
+                                                        referrerpolicy="no-referrer-when-downgrade">
+                                                    </iframe>
+                                                </div>
+
+                                                <div class="box-mapas red">
+                                                    <h3 class="text-maps">MEDELLÍN</h3>
+                                                    <img src="./assets/imagenes/image-medellin.jpg"
+                                                        alt="Vista de aérea de Medellín">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.5356949924593!2d-75.57208208573807!3d6.2441987954843785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442856c9a9d6c5%3A0x7b9f04fdb7a68c9f!2sParque%20Berr%C3%ADo%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1689999999999!5m2!1ses!2sco"
+                                                        allowfullscreen="" loading="lazy"
+                                                        referrerpolicy="no-referrer-when-downgrade">
+                                                    </iframe>
+                                                </div>
+
+                                            </div>
+                                        </section>
+
+                                        <div style="height: 55vh;"></div>
+                                        <!-- Logos de empresas -->
+                                        <section class="company-logos" aria-labelledby="clientes-titulo">
+                                            <h2>Algunos De Nuestros Clientes</h2>
+                                            <ul class="lista-logos-empresas">
+                                                <li><img src="./assets/imagenes/logo-empresa.png"
+                                                        alt="Logo de Cliente 1" class="logo-empresas logo-blur"></li>
+                                                <li><img src="./assets/imagenes/logo-empresa.png"
+                                                        alt="Logo de Cliente 2" class="logo-empresas logo-front"></li>
+                                                <li><img src="./assets/imagenes/logo-empresa.png"
+                                                        alt="Logo de Cliente 3" class="logo-empresas logo-blur"></li>
+                                                <li><img src="./assets/imagenes/logo-empresa.png"
+                                                        alt="Logo de Cliente 4" class="logo-empresas logo-front"></li>
+                                                <li><img src="./assets/imagenes/logo-empresa.png"
+                                                        alt="Logo de Cliente 5" class="logo-empresas logo-blur"></li>
+                                                <li><img src="./assets/imagenes/logo-empresa.png"
+                                                        alt="Logo de Cliente 6" class="logo-empresas logo-front"></li>
+                                            </ul>
+                                        </section>
+
+                                        <div style="height: 55vh;"></div>
     </main>
 
+    <footer class="footer-contacto">
+        <div class="form-contacto">
+            <form class="footer-form" aria-label="Formulario de descuento">
+                <h3>¡REGÍSTRATE Y OBTÉN DESCUENTOS EXCLUSIVOS!</h3>
+                <div class="box-email">
+                    <label for="footer-email" class="text-label">Correo electrónico</label>
+                    <input type="email" placeholder="Tu correo electrónico" required name="email">
+                    <button type="submit">RECIBIR DESCUENTO</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="menu-footer">
+            <section>
+                <h4 style="margin-bottom: 3%;">Indumetalicas Cobenzas SAS</h4>
+                <ul>
+                    <li>
+                        <img src="./assets/imagenes/LOGO.png" alt="Logo de Indumetálicas Cobenzas SAS">
+                    </li>
+                    <li>
+                        <p>
+                            Ofrecemos soluciones eléctricas diseñadas para garantizar seguridad y eficiencia en
+                            instalaciones de
+                            todo tipo. Fabricamos gabinetes metálicos resistentes, soportes para medidores y
+                            envolventes para
+                            exteriores que cumplen con las normativas vigentes.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Contacto</h4>
+                <ul>
+                    <li>CRA 10 N°5-44 SUR SAN FRANCISCO - TUNJA</li>
+                    <li><a href="tel:+572112221560"></a>+57 2112221560</li>
+                    <li><a href="mailto:indumetalicascobenzas@gmail.com"></a>INDUMETALICASCOBENZAS@GMAIL.COM</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Horarios de atención</h4>
+                <ul>
+                    <li>LUNES 8:00 am - 5:00 pm</li>
+                    <li>MARTES 8:00 am - 5:00 pm</li>
+                    <li>MIERCOLES 8:00 am - 5:00 pm</li>
+                    <li>JUEVES 8:00 am - 5:00 pm</li>
+                    <li>VIERNES 8:00 am - 5:00 pm</li>
+                    <li>SABADO 8:00 am - 5:00 pm</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="">INICIO</a></li>
+                    <li><a href="">PRODUCTOS</a></li>
+                    <li><a href="">NOSOTROS</a></li>
+                    <li><a href="">CERTIFICACIONES</a></li>
+                    <li><a href="">CONTACTO</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="derechos-reservados">
+            <p>&copy; 2025 INDUMETALICAS_COBENZAS_SAS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- LOGO WHATSAPP -->
+    <a href="https://wa.me/573246720142?text=¡Hola!%20Quisiera%20más%20información%20sobre%20sus%20productos."
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" width="32" height="32">
+            <path
+                d="M16 .001C7.163.001 0 7.164 0 16c0 2.835.744 5.551 2.155 7.971L.03 32l8.215-2.104A15.963 15.963 0 0016 32c8.837 0 16-7.163 16-16S24.837.001 16 .001zm0 29.7c-2.624 0-5.184-.687-7.418-1.986l-.531-.313-4.876 1.247 1.294-4.751-.345-.544C2.532 21.034 1.9 18.552 1.9 16 1.9 8.373 8.373 1.9 16 1.9S30.1 8.373 30.1 16 23.627 29.7 16 29.7zm8.473-9.277c-.461-.23-2.73-1.348-3.154-1.5-.424-.154-.733-.23-1.042.23-.307.462-1.197 1.5-1.466 1.81-.27.307-.538.346-1 .115-.462-.23-1.954-.72-3.727-2.298-1.377-1.229-2.308-2.75-2.58-3.211-.269-.462-.029-.712.2-.94.205-.204.462-.538.692-.807.23-.27.308-.462.462-.77.153-.307.077-.576-.038-.806-.115-.23-1.042-2.514-1.427-3.44-.376-.9-.755-.777-1.042-.777h-.892c-.307 0-.806.115-1.228.577C5.706 9.01 4.8 10.227 4.8 12.51c0 2.283 1.651 4.498 1.881 4.807.23.308 3.248 4.94 7.864 6.922 1.1.477 1.96.76 2.629.974 1.104.352 2.106.304 2.9.184.885-.135 2.73-1.116 3.118-2.19.385-1.075.385-1.997.27-2.19-.114-.193-.422-.308-.883-.538z" />
+        </svg>
+        <span class="sr-only">Chatea con nosotros por WhatsApp</span>
+    </a>
 
     <!-- GSAP + ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
